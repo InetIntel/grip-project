@@ -1,0 +1,310 @@
+######## #### traceroute worthy tags
+########
+tr_yes:
+  - tags: [not-previously-announced-by-any-newcomer]
+    explain: "newcomer has not previously announced the prefix before, worth checking out"
+  - tags: [sub-path-longer]
+    explain: "sub-prefix travels longer in AS paths"
+  - tags: [reserved-space]
+    explain: "reserved prefix should not be announced"
+  - tags: [blacklist-asn]
+    explain: "the AS was reported for malicious behaviors before"
+  - tags: [spamhaus-asn-drop]
+    explain: "the AS is on spamhaus asn-drop list"
+  - tags: [all-newcomers-next-to-an-oldcomer, newcomer-small-asn]
+    explain: "fat-finger as path prepending"
+  - tags: [origin-small-edit-distance]
+    explain: "fat-finger wrong as number"
+  - tags: [prefix-small-edit-distance]
+    explain: "fat-finger wrong prefix"
+  - tags: [hegemony-valley-paths]
+    explain: "contain hegemony valley in paths"
+  - tags: [hegemony-rare-path-segments]
+    explain: "contain unusual path segments in paths"
+  - tags: [rpki-all-newcomer-invalid-roa]
+    explain: "newcomer announces prefix with invalid ROA record"
+  - tags: [rpki-some-newcomer-invalid-roa]
+    explain: "newcomer announces prefix with invalid ROA record"
+  - tags: [rpki-all-oldcomer-invalid-roa]
+    explain: "oldcomer announces prefix with invalid ROA record"
+  - tags: [rpki-some-oldcomer-invalid-roa]
+    explain: "oldcomer announces prefix with invalid ROA record"
+  - tags: [irr-RADB-all-newcomer-no-record, irr-RADB-some-newcomer-no-record, 
+           irr-BBOI-all-newcomer-no-record, irr-BBOI-some-newcomer-no-record, 
+           irr-RIPE-NONAUTH-all-newcomer-no-record, irr-RIPE-NONAUTH-some-newcomer-no-record, 
+           irr-NESTEGG-all-newcomer-no-record, irr-NESTEGG-some-newcomer-no-record, 
+           irr-CANARIE-all-newcomer-no-record, irr-CANARIE-some-newcomer-no-record, 
+           irr-ARIN-all-newcomer-no-record, irr-ARIN-some-newcomer-no-record, 
+           irr-APNIC-all-newcomer-no-record, irr-APNIC-some-newcomer-no-record, 
+           irr-REACH-all-newcomer-no-record, irr-REACH-some-newcomer-no-record, 
+           irr-BELL-all-newcomer-no-record, irr-BELL-some-newcomer-no-record, 
+           irr-AFRINIC-all-newcomer-no-record, irr-AFRINIC-some-newcomer-no-record, 
+           irr-OPENFACE-all-newcomer-no-record, irr-OPENFACE-some-newcomer-no-record, 
+           irr-TC-all-newcomer-no-record, irr-TC-some-newcomer-no-record, 
+           irr-ALTDB-all-newcomer-no-record, irr-ALTDB-some-newcomer-no-record, 
+           irr-RIPE-all-newcomer-no-record, irr-RIPE-some-newcomer-no-record, 
+           irr-LACNIC-all-newcomer-no-record, irr-LACNIC-some-newcomer-no-record, 
+           irr-LEVEL3-all-newcomer-no-record, irr-LEVEL3-some-newcomer-no-record, 
+           irr-PANIX-all-newcomer-no-record, irr-PANIX-some-newcomer-no-record, 
+           irr-JPIRR-all-newcomer-no-record, irr-JPIRR-some-newcomer-no-record, 
+           irr-IDNIC-all-newcomer-no-record, irr-IDNIC-some-newcomer-no-record, 
+           irr-NTTCOM-all-newcomer-no-record, irr-NTTCOM-some-newcomer-no-record, 
+           irr-WCGDB-all-newcomer-no-record, irr-WCGDB-some-newcomer-no-record]
+    explain: "newcomers announce prefixes they have not registered in IRR."
+  - tags: [irr-RADB-all-oldcomer-no-record, irr-RADB-some-oldcomer-no-record, 
+           irr-BBOI-all-oldcomer-no-record, irr-BBOI-some-oldcomer-no-record, 
+           irr-RIPE-NONAUTH-all-oldcomer-no-record, irr-RIPE-NONAUTH-some-oldcomer-no-record, 
+           irr-NESTEGG-all-oldcomer-no-record, irr-NESTEGG-some-oldcomer-no-record, 
+           irr-CANARIE-all-oldcomer-no-record, irr-CANARIE-some-oldcomer-no-record, 
+           irr-ARIN-all-oldcomer-no-record, irr-ARIN-some-oldcomer-no-record, 
+           irr-APNIC-all-oldcomer-no-record, irr-APNIC-some-oldcomer-no-record, 
+           irr-REACH-all-oldcomer-no-record, irr-REACH-some-oldcomer-no-record, 
+           irr-BELL-all-oldcomer-no-record, irr-BELL-some-oldcomer-no-record, 
+           irr-AFRINIC-all-oldcomer-no-record, irr-AFRINIC-some-oldcomer-no-record, 
+           irr-OPENFACE-all-oldcomer-no-record, irr-OPENFACE-some-oldcomer-no-record, 
+           irr-TC-all-oldcomer-no-record, irr-TC-some-oldcomer-no-record, 
+           irr-ALTDB-all-oldcomer-no-record, irr-ALTDB-some-oldcomer-no-record, 
+           irr-RIPE-all-oldcomer-no-record, irr-RIPE-some-oldcomer-no-record, 
+           irr-LACNIC-all-oldcomer-no-record, irr-LACNIC-some-oldcomer-no-record, 
+           irr-LEVEL3-all-oldcomer-no-record, irr-LEVEL3-some-oldcomer-no-record, 
+           irr-PANIX-all-oldcomer-no-record, irr-PANIX-some-oldcomer-no-record, 
+           irr-JPIRR-all-oldcomer-no-record, irr-JPIRR-some-oldcomer-no-record, 
+           irr-IDNIC-all-oldcomer-no-record, irr-IDNIC-some-oldcomer-no-record, 
+           irr-NTTCOM-all-oldcomer-no-record, irr-NTTCOM-some-oldcomer-no-record, 
+           irr-WCGDB-all-oldcomer-no-record, irr-WCGDB-some-oldcomer-no-record]
+    explain: "oldcomers announce prefixes they have not registered in IRR."
+
+########
+#### traceroute NOT worthy tags
+########
+tr_no:
+  - tags: [short-prefix]
+    explain: "super-prefix is too large, likely be noise with large quantity, do not traceroute"
+  - tags: [ipv6-prefix]
+    explain: "no ipv6 prefix should be tracerouted"
+  - tags: [recurring-pfx-event]
+    explain: "recurring events should be ignored"
+  - tags: [due-to-as-trans]
+    explain: "AS_TRANS is a placeholder AS for 32-bit ASN, this event should be ignored"
+  - tags: [no-newcomer]
+    explain: "we cannot figure out which AS is the newcomer in the event, no need to further traceroute"
+  - tags: [all-newcomers]
+    explain: "all origins are newcomer to the prefix, no victims, no need to traceroute"
+  - tags: [due-to-private-asn]
+    explain: ""
+  - tags: [all-newcomers-private-asn]
+    explain: ""
+  - tags: [all-newcomers-as-trans]
+    explain: ""
+  - tags: [all-newcomers-private-and-as-trans]
+    explain: ""
+  - tags: [due-to-dps-asn]
+    explain: "event caused by dps asns"
+  - tags: [due-to-private-and-as-trans]
+    explain: "event caused by private and as-trans asns"
+  - tags: [all-newcomers-dps-asn]
+    explain: ""
+  - tags: [previously-announced-by-all-newcomers]
+    explain: ""
+  - tags: [ixp-prefix]
+    explain: ""
+  - tags: [single-ip]
+    explain: ""
+  - tags: [long-prefix]
+    explain: "very long prefix does not attack much traffic and are likely to be triggered by normal traffic engineering"
+    apply_to: ["defcon"]
+  - tags: [newcomer-less-specific]
+    explain: "less specific prefix cannot attract traffic"
+  - tags: [oldcomer-newcomer-all-siblings]
+    explain: ""
+  - tags: [oldcomer-newcomer-some-siblings]
+    explain: ""
+  - tags: [single-rel-upstream-chain]
+    explain: ""
+  - tags: [all-newcomers-are-providers]
+    explain: ""
+  - tags: [all-newcomers-are-customers]
+    explain: ""
+  - tags: [all-newcomers-are-peers]
+    explain: ""
+  - tags: [all-newcomers-are-rel-upstream]
+    explain: ""
+  - tags: [all-newcomers-are-rel-downstream]
+    explain: ""
+  - tags: [ixp-colocated]
+    explain: ""
+  - tags: [adj-previously-observed-opposite]
+    explain: ""
+  - tags: [adj-previously-observed-exact]
+    explain: ""
+  - tags: [new-bidirectional]
+    explain: ""
+  - tags: [sub-path-shorter]
+    explain: ""
+  - tags: [no-common-monitors]
+    explain: ""
+  - tags: [superpaths-include-subpaths]
+    explain: ""
+  - tags: [not-previously-announced]
+    explain: ""
+  - tags: [no-newcomer-pfxs]
+    explain: ""
+  - tags: [submoas-causing-moas-subpfx]
+    explain: "if sub/super prefix in a subMOAS event is also in a MOAS event, let the MOAS event trigger the traceroutes"
+  - tags: [submoas-causing-moas-superpfx]
+    explain: "if sub/super prefix in a subMOAS event is also in a MOAS event, let the MOAS event trigger the traceroutes"
+  - tags: [submoas-covered-by-moas-subpfx]
+    explain: ""
+  - tags: [submoas-covered-by-moas-superpfx]
+    explain: ""
+  - tags: [moas-transition]
+    explain: "moas transition can only be tagged at the event finish time, traceroute decision is not applicable"
+  - tags: [moas-potential-convergence]
+    explain: "moas likely caused by bgp convergence"
+  - tags: [moas-potential-transfer]
+    explain: "moas likely caused by prefix ownership transfer"
+  - tags: [less-origins, no-newcomer]
+    explain: "shrinking moas"
+  - tags: [rpki-all-newcomer-valid-roa]
+    explain: "all newcomers has valid ROA record for the prefix in question"
+  - tags: [irr-TC-all-newcomer-exact-record, irr-NESTEGG-all-newcomer-exact-record, irr-IDNIC-all-newcomer-exact-record, 
+          irr-ARIN-all-newcomer-exact-record, irr-OPENFACE-all-newcomer-exact-record, irr-RIPE-all-newcomer-exact-record, 
+          irr-LACNIC-all-newcomer-exact-record, irr-CANARIE-all-newcomer-exact-record, irr-JPIRR-all-newcomer-exact-record, 
+          irr-ALTDB-all-newcomer-exact-record, irr-APNIC-all-newcomer-exact-record, irr-RADB-all-newcomer-exact-record, 
+          irr-NTTCOM-all-newcomer-exact-record, irr-BELL-all-newcomer-exact-record, irr-REACH-all-newcomer-exact-record, 
+          irr-PANIX-all-newcomer-exact-record, irr-AFRINIC-all-newcomer-exact-record, irr-BBOI-all-newcomer-exact-record, 
+          irr-RIPE-NONAUTH-all-newcomer-exact-record, irr-WCGDB-all-newcomer-exact-record, irr-LEVEL3-all-newcomer-exact-record]
+    explain: "all newcomers have exact IRR records for the prefix in question"
+  - tags: [missed-low-duration]
+    explain: "missed in real-time due to low duration (less than 5 min)"
+tr_na:
+  - tags: [notags]
+    explain: ""
+  - tags: [outdated-info]
+    explain: ""
+  - tags: [less-origins]
+    explain: ""
+  - tags: [has-private-asn]
+    explain: ""
+  - tags: [some-newcomers-private-asn]
+    explain: ""
+  - tags: [has-dps-asn]
+    explain: ""
+  - tags: [some-newcomers-dps-asn]
+    explain: ""
+  - tags: [previously-announced-by-some-newcomers]
+    explain: ""
+  - tags: [oldcomer-all-siblings]
+    explain: ""
+  - tags: [oldcomer-some-siblings]
+    explain: ""
+  - tags: [newcomer-all-siblings]
+    explain: ""
+  - tags: [newcomer-some-siblings]
+    explain: ""
+  - tags: [all-newcomers-are-rel-neighbor]
+    explain: ""
+  - tags: [some-newcomers-are-providers]
+    explain: ""
+  - tags: [some-newcomers-are-customers]
+    explain: ""
+  - tags: [some-newcomers-are-peers]
+    explain: ""
+  - tags: [some-newcomers-are-rel-neighbor]
+    explain: ""
+  - tags: [some-newcomers-are-rel-upstream]
+    explain: ""
+  - tags: [some-newcomers-are-rel-downstream]
+    explain: ""
+  - tags: [all-newcomers-stub-ases]
+    explain: ""
+  - tags: [some-newcomers-stub-ases]
+    explain: ""
+  - tags: [all-victims-stub-ases]
+    explain: ""
+  - tags: [some-victims-stub-ases]
+    explain: ""
+  - tags: [newcomer-small-asn]
+    explain: ""
+  - tags: [all-origins-same-country]
+    explain: ""
+  - tags: [all-newcomer-pfxs]
+    explain: "does not imply that all ASes are newcomers"
+
+  - tags: [no-common-hops-super-pfx]
+    explain: ""
+  - tags: [no-common-hops-sub-pfx]
+    explain: ""
+  - tags: [sub-path-equal]
+    explain: ""
+  - tags: [newcomer-more-specific]
+    explain: ""
+  - tags: [single-Tier-1-upstream-on-subpaths-2-hops]
+    explain: ""
+  - tags: [single-Tier-1-upstream-on-subpaths-1-hop]
+    explain: ""
+
+  - tags: [all-newcomers-next-to-an-oldcomer]
+    explain: ""
+  - tags: [oldcomers-always-on-newcomer-originated-paths]
+    explain: ""
+  - tags: [newcomers-always-on-oldcomer-originated-paths]
+    explain: ""
+  - tags: [oldcomer-path-prepending]
+    explain: ""
+  - tags: [long-prefix]
+    explain: "very long prefix does not attack much traffic and are likely to be triggered by normal traffic engineering"
+    apply_to: ["moas","submoas","edges"]
+  - tags: [all-newcomer-announced-no-pfxs]
+    explain: ""
+  - tags: [some-newcomer-announced-no-pfxs]
+    explain: ""
+  - tags: [edge-small-edit-distance]
+    explain: ""
+    
+  - tags: [all-new-edge-at-origin]
+    explain: ""
+  - tags: [no-new-edge-at-origin]
+    explain: ""
+  - tags: [all-new-edge-at-collectors]
+    explain: ""
+  - tags: [new-edge-connected-to-Tier-1]
+    explain: ""
+  - tags: [skipped-pfx-event]
+    explain: ""
+  - tags: [no-origins-prev-view]
+    explain: "no origins in the previous view"
+  - tags: [same-origins-prev-view]
+    explain: "all origins are the same between current view and previous view"
+
+  # as-trans
+  - tags: [has-as-trans]
+    explain: ""
+  - tags: [some-newcomers-as-trans]
+    explain: ""
+  # rpki
+  - tags: [rpki-all-oldcomer-valid-roa]
+    explain: ""
+  - tags: [rpki-some-newcomer-valid-roa]
+    explain: ""
+  - tags: [rpki-all-newcomer-unknown-roa]
+    explain: ""
+  - tags: [rpki-some-newcomer-unknown-roa]
+    explain: ""
+  - tags: [rpki-newcomer-invalid-roa-due-to-as]
+    explain: ""
+  - tags: [rpki-newcomer-invalid-roa-due-to-length]
+    explain: ""
+  - tags: [rpki-some-oldcomer-valid-roa]
+    explain: ""
+  - tags: [rpki-all-oldcomer-unknown-roa]
+    explain: ""
+  - tags: [rpki-some-oldcomer-unknown-roa]
+    explain: ""
+  - tags: [rpki-oldcomer-invalid-roa-due-to-as]
+    explain: ""
+  - tags: [rpki-oldcomer-invalid-roa-due-to-length]
+    explain: ""
+  # irr
+  - tags: [irr-NTTCOM-all-newcomer-more-specific-record, irr-NTTCOM-some-newcomer-exact-record, irr-NTTCOM-some-newcomer-more-specific-record, irr-IDNIC-all-newcomer-more-specific-record, irr-IDNIC-some-newcomer-exact-record, irr-IDNIC-some-newcomer-more-specific-record, irr-OPENFACE-all-newcomer-more-specific-record, irr-OPENFACE-some-newcomer-exact-record, irr-OPENFACE-some-newcomer-more-specific-record, irr-TC-all-newcomer-more-specific-record, irr-TC-some-newcomer-exact-record, irr-TC-some-newcomer-more-specific-record, irr-APNIC-all-newcomer-more-specific-record, irr-APNIC-some-newcomer-exact-record, irr-APNIC-some-newcomer-more-specific-record, irr-LEVEL3-all-newcomer-more-specific-record, irr-LEVEL3-some-newcomer-exact-record, irr-LEVEL3-some-newcomer-more-specific-record, irr-WCGDB-all-newcomer-more-specific-record, irr-WCGDB-some-newcomer-exact-record, irr-WCGDB-some-newcomer-more-specific-record, irr-ARIN-all-newcomer-more-specific-record, irr-ARIN-some-newcomer-exact-record, irr-ARIN-some-newcomer-more-specific-record, irr-AFRINIC-all-newcomer-more-specific-record, irr-AFRINIC-some-newcomer-exact-record, irr-AFRINIC-some-newcomer-more-specific-record, irr-CANARIE-all-newcomer-more-specific-record, irr-CANARIE-some-newcomer-exact-record, irr-CANARIE-some-newcomer-more-specific-record, irr-NESTEGG-all-newcomer-more-specific-record, irr-NESTEGG-some-newcomer-exact-record, irr-NESTEGG-some-newcomer-more-specific-record, irr-RIPE-NONAUTH-all-newcomer-more-specific-record, irr-RIPE-NONAUTH-some-newcomer-exact-record, irr-RIPE-NONAUTH-some-newcomer-more-specific-record, irr-LACNIC-all-newcomer-more-specific-record, irr-LACNIC-some-newcomer-exact-record, irr-LACNIC-some-newcomer-more-specific-record, irr-REACH-all-newcomer-more-specific-record, irr-REACH-some-newcomer-exact-record, irr-REACH-some-newcomer-more-specific-record, irr-ALTDB-all-newcomer-more-specific-record, irr-ALTDB-some-newcomer-exact-record, irr-ALTDB-some-newcomer-more-specific-record, irr-BELL-all-newcomer-more-specific-record, irr-BELL-some-newcomer-exact-record, irr-BELL-some-newcomer-more-specific-record, irr-BBOI-all-newcomer-more-specific-record, irr-BBOI-some-newcomer-exact-record, irr-BBOI-some-newcomer-more-specific-record, irr-JPIRR-all-newcomer-more-specific-record, irr-JPIRR-some-newcomer-exact-record, irr-JPIRR-some-newcomer-more-specific-record, irr-RIPE-all-newcomer-more-specific-record, irr-RIPE-some-newcomer-exact-record, irr-RIPE-some-newcomer-more-specific-record, irr-RADB-all-newcomer-more-specific-record, irr-RADB-some-newcomer-exact-record, irr-RADB-some-newcomer-more-specific-record, irr-PANIX-all-newcomer-more-specific-record, irr-PANIX-some-newcomer-exact-record, irr-PANIX-some-newcomer-more-specific-record, irr-NTTCOM-all-oldcomer-exact-record, irr-NTTCOM-all-oldcomer-more-specific-record, irr-NTTCOM-some-oldcomer-exact-record, irr-NTTCOM-some-oldcomer-more-specific-record, irr-IDNIC-all-oldcomer-exact-record, irr-IDNIC-all-oldcomer-more-specific-record, irr-IDNIC-some-oldcomer-exact-record, irr-IDNIC-some-oldcomer-more-specific-record, irr-OPENFACE-all-oldcomer-exact-record, irr-OPENFACE-all-oldcomer-more-specific-record, irr-OPENFACE-some-oldcomer-exact-record, irr-OPENFACE-some-oldcomer-more-specific-record, irr-TC-all-oldcomer-exact-record, irr-TC-all-oldcomer-more-specific-record, irr-TC-some-oldcomer-exact-record, irr-TC-some-oldcomer-more-specific-record, irr-APNIC-all-oldcomer-exact-record, irr-APNIC-all-oldcomer-more-specific-record, irr-APNIC-some-oldcomer-exact-record, irr-APNIC-some-oldcomer-more-specific-record, irr-LEVEL3-all-oldcomer-exact-record, irr-LEVEL3-all-oldcomer-more-specific-record, irr-LEVEL3-some-oldcomer-exact-record, irr-LEVEL3-some-oldcomer-more-specific-record, irr-WCGDB-all-oldcomer-exact-record, irr-WCGDB-all-oldcomer-more-specific-record, irr-WCGDB-some-oldcomer-exact-record, irr-WCGDB-some-oldcomer-more-specific-record, irr-ARIN-all-oldcomer-exact-record, irr-ARIN-all-oldcomer-more-specific-record, irr-ARIN-some-oldcomer-exact-record, irr-ARIN-some-oldcomer-more-specific-record, irr-AFRINIC-all-oldcomer-exact-record, irr-AFRINIC-all-oldcomer-more-specific-record, irr-AFRINIC-some-oldcomer-exact-record, irr-AFRINIC-some-oldcomer-more-specific-record, irr-CANARIE-all-oldcomer-exact-record, irr-CANARIE-all-oldcomer-more-specific-record, irr-CANARIE-some-oldcomer-exact-record, irr-CANARIE-some-oldcomer-more-specific-record, irr-NESTEGG-all-oldcomer-exact-record, irr-NESTEGG-all-oldcomer-more-specific-record, irr-NESTEGG-some-oldcomer-exact-record, irr-NESTEGG-some-oldcomer-more-specific-record, irr-RIPE-NONAUTH-all-oldcomer-exact-record, irr-RIPE-NONAUTH-all-oldcomer-more-specific-record, irr-RIPE-NONAUTH-some-oldcomer-exact-record, irr-RIPE-NONAUTH-some-oldcomer-more-specific-record, irr-LACNIC-all-oldcomer-exact-record, irr-LACNIC-all-oldcomer-more-specific-record, irr-LACNIC-some-oldcomer-exact-record, irr-LACNIC-some-oldcomer-more-specific-record, irr-REACH-all-oldcomer-exact-record, irr-REACH-all-oldcomer-more-specific-record, irr-REACH-some-oldcomer-exact-record, irr-REACH-some-oldcomer-more-specific-record, irr-ALTDB-all-oldcomer-exact-record, irr-ALTDB-all-oldcomer-more-specific-record, irr-ALTDB-some-oldcomer-exact-record, irr-ALTDB-some-oldcomer-more-specific-record, irr-BELL-all-oldcomer-exact-record, irr-BELL-all-oldcomer-more-specific-record, irr-BELL-some-oldcomer-exact-record, irr-BELL-some-oldcomer-more-specific-record, irr-BBOI-all-oldcomer-exact-record, irr-BBOI-all-oldcomer-more-specific-record, irr-BBOI-some-oldcomer-exact-record, irr-BBOI-some-oldcomer-more-specific-record, irr-JPIRR-all-oldcomer-exact-record, irr-JPIRR-all-oldcomer-more-specific-record, irr-JPIRR-some-oldcomer-exact-record, irr-JPIRR-some-oldcomer-more-specific-record, irr-RIPE-all-oldcomer-exact-record, irr-RIPE-all-oldcomer-more-specific-record, irr-RIPE-some-oldcomer-exact-record, irr-RIPE-some-oldcomer-more-specific-record, irr-RADB-all-oldcomer-exact-record, irr-RADB-all-oldcomer-more-specific-record, irr-RADB-some-oldcomer-exact-record, irr-RADB-some-oldcomer-more-specific-record, irr-PANIX-all-oldcomer-exact-record, irr-PANIX-all-oldcomer-more-specific-record, irr-PANIX-some-oldcomer-exact-record, irr-PANIX-some-oldcomer-more-specific-record]
+    explain: ""
